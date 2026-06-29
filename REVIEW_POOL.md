@@ -19,6 +19,7 @@
 | Task 3：仓库文件分类 | 2026-06-28 | 尚未进行 | 2026-06-30 | 中 | 源码与权重、数据、缓存、凭据、许可证、外部存储 |
 | Task 4：最小 `.gitignore` | 2026-06-28 | 2026-06-29 | 2026-07-02 | 中 | 根目录锚定、目录规则、已跟踪文件、忽略不等于删除 |
 | Task 5：选择性暂存 | 2026-06-29 | 尚未进行 | 2026-06-30 | 高 | 工作目录/暂存区/历史、选择性 `add`、`diff --cached`、快照更新 |
+| Task 6：第一次 Git 提交 | 2026-06-29 | 尚未进行 | 2026-06-30 | 高 | commit/push、哈希、HEAD/分支、amend、log/reflog、提交前验证 |
 
 ## 跨 Task 高优先级薄弱点
 
@@ -29,6 +30,7 @@
 | 不同命令的参数归属 | Task 4、Task 5 | 曾把 Git 参数用于 PowerShell 命令 | 2026-06-30 |
 | 执行前等待 Review | Task 4、Task 5 | 曾在要求暂停时提前执行 | 2026-06-30 |
 | 模型源码、权重与环境文件 | Task 3 | 新场景中最终正确，仍需间隔复习 | 2026-07-01 |
+| 检查失败后停止而非绕过 | Task 6 | 首次练习跳过暂存检查，第二次已改正 | 2026-06-30 |
 
 ## Review 记录
 
@@ -46,3 +48,4 @@
 - Task 3：Assessment 已通过，已进入 Review Pool。
 - Task 4：Assessment 已通过，已进入 Review Pool；已完成一次长期 Review。
 - Task 5：Assessment 已通过，已进入 Review Pool。
+- Task 6：Assessment 已通过，已进入 Review Pool。
