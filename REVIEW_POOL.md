@@ -20,6 +20,7 @@
 | Task 4：最小 `.gitignore` | 2026-06-28 | 2026-06-29 | 2026-07-02 | 中 | 根目录锚定、目录规则、已跟踪文件、忽略不等于删除 |
 | Task 5：选择性暂存 | 2026-06-29 | 尚未进行 | 2026-06-30 | 高 | 工作目录/暂存区/历史、选择性 `add`、`diff --cached`、快照更新 |
 | Task 6：第一次 Git 提交 | 2026-06-29 | 尚未进行 | 2026-06-30 | 高 | commit/push、哈希、HEAD/分支、amend、log/reflog、提交前验证 |
+| Task 7：小而完整的增量提交 | 2026-06-29 | 尚未进行 | 2026-06-30 | 高 | 增量提交流程、暂存区检查、`-- <path>`、`--oneline`、失败后停止 Debug |
 
 ## 跨 Task 高优先级薄弱点
 
@@ -31,6 +32,8 @@
 | 执行前等待 Review | Task 4、Task 5 | 曾在要求暂停时提前执行 | 2026-06-30 |
 | 模型源码、权重与环境文件 | Task 3 | 新场景中最终正确，仍需间隔复习 | 2026-07-01 |
 | 检查失败后停止而非绕过 | Task 6 | 首次练习跳过暂存检查，第二次已改正 | 2026-06-30 |
+| 提交前完整验证流程 | Task 7 | 功能已能完成，但独立 Assessment 刚过线 | 2026-06-30 |
+| `--` 路径分隔符与长选项拼写 | Task 7 | 曾写成 `--"test.txt"` 和 `-oneline`，已修正 | 2026-06-30 |
 
 ## Review 记录
 
@@ -49,3 +52,4 @@
 - Task 4：Assessment 已通过，已进入 Review Pool；已完成一次长期 Review。
 - Task 5：Assessment 已通过，已进入 Review Pool。
 - Task 6：Assessment 已通过，已进入 Review Pool。
+- Task 7：Assessment 已通过，已进入 Review Pool。
