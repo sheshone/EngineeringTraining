@@ -21,6 +21,7 @@
 | Task 5：选择性暂存 | 2026-06-29 | 尚未进行 | 2026-06-30 | 高 | 工作目录/暂存区/历史、选择性 `add`、`diff --cached`、快照更新 |
 | Task 6：第一次 Git 提交 | 2026-06-29 | 尚未进行 | 2026-06-30 | 高 | commit/push、哈希、HEAD/分支、amend、log/reflog、提交前验证 |
 | Task 7：小而完整的增量提交 | 2026-06-29 | 尚未进行 | 2026-06-30 | 高 | 增量提交流程、暂存区检查、`-- <path>`、`--oneline`、失败后停止 Debug |
+| Task 8：创建最小项目结构 | 2026-06-30 | 尚未进行 | 2026-07-01 | 高 | `src/`、`notebooks/`、`outputs/`、`.gitkeep`、空目录、PowerShell 文件操作 |
 
 ## 跨 Task 高优先级薄弱点
 
@@ -34,6 +35,8 @@
 | 检查失败后停止而非绕过 | Task 6 | 首次练习跳过暂存检查，第二次已改正 | 2026-06-30 |
 | 提交前完整验证流程 | Task 7 | 功能已能完成，但独立 Assessment 刚过线 | 2026-06-30 |
 | `--` 路径分隔符与长选项拼写 | Task 7 | 曾写成 `--"test.txt"` 和 `-oneline`，已修正 | 2026-06-30 |
+| PowerShell 文件操作模板 | Task 8 | 能纠错后写出，独立稳定性仍偏弱 | 2026-07-01 |
+| 空目录、`.gitkeep` 与 ignore 的关系 | Task 8 | 最初概念混淆，修正后通过 | 2026-07-01 |
 
 ## Review 记录
 
@@ -53,3 +56,4 @@
 - Task 5：Assessment 已通过，已进入 Review Pool。
 - Task 6：Assessment 已通过，已进入 Review Pool。
 - Task 7：Assessment 已通过，已进入 Review Pool。
+- Task 8：Assessment 已通过，已进入 Review Pool。

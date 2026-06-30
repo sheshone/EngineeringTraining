@@ -1,2 +1,3 @@
 #ignore local medical datasets
 /MedMNIST_Blood_Path_Organ_128/
+/outputs/
