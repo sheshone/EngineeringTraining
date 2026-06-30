@@ -22,6 +22,7 @@
 | Task 6：第一次 Git 提交 | 2026-06-29 | 尚未进行 | 2026-06-30 | 高 | commit/push、哈希、HEAD/分支、amend、log/reflog、提交前验证 |
 | Task 7：小而完整的增量提交 | 2026-06-29 | 尚未进行 | 2026-06-30 | 高 | 增量提交流程、暂存区检查、`-- <path>`、`--oneline`、失败后停止 Debug |
 | Task 8：创建最小项目结构 | 2026-06-30 | 尚未进行 | 2026-07-01 | 高 | `src/`、`notebooks/`、`outputs/`、`.gitkeep`、空目录、PowerShell 文件操作 |
+| Task 9：最小环境检查脚本 | 2026-06-30 | 尚未进行 | 2026-07-01 | 高 | Python 导入、`sys.executable`、PyTorch 版本、`pathlib`、当前工作目录与脚本路径 |
 
 ## 跨 Task 高优先级薄弱点
 
@@ -37,6 +38,8 @@
 | `--` 路径分隔符与长选项拼写 | Task 7 | 曾写成 `--"test.txt"` 和 `-oneline`，已修正 | 2026-06-30 |
 | PowerShell 文件操作模板 | Task 8 | 能纠错后写出，独立稳定性仍偏弱 | 2026-07-01 |
 | 空目录、`.gitkeep` 与 ignore 的关系 | Task 8 | 最初概念混淆，修正后通过 | 2026-07-01 |
+| Python 导入与关键字拼写 | Task 9 | 曾把 `import` 写成 `improt`，能够定位并修正 | 2026-07-01 |
+| 当前工作目录与脚本所在目录 | Task 9 | 最初误认为相对路径天然相对项目根目录，修正后通过 | 2026-07-01 |
 
 ## Review 记录
 
@@ -57,3 +60,4 @@
 - Task 6：Assessment 已通过，已进入 Review Pool。
 - Task 7：Assessment 已通过，已进入 Review Pool。
 - Task 8：Assessment 已通过，已进入 Review Pool。
+- Task 9：Assessment 已通过，已进入 Review Pool。
