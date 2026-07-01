@@ -76,3 +76,18 @@
 - 薄弱点：
   - 属性 / 方法 / 模块函数的区分仍需复习。
   - API 不确定时要优先使用 `type`、`hasattr`、`callable`，不要随机猜。
+### Task 11：Inspect Image Pixel Range
+
+- 完成日期：2026-07-01
+- Assessment：通过，已进入 Review Pool
+- Review 优先级：高
+- 重点知识：
+  - `train_images.shape = (N, H, W, C)`，本任务中为 `(11959, 128, 128, 3)`。
+  - `train_images[0]` 会去掉样本维度，得到单张图像 `(128, 128, 3)`。
+  - `image[0, 0]` 是一个像素的 RGB 三个通道值，shape 为 `(3,)`。
+  - `uint8` 表示无符号 8 位整数，范围是 `0~255`。
+  - `image / 255.0` 会产生浮点数组，通常用于把像素缩放到 `0~1`。
+  - 归一化改变像素值和 dtype，不改变图像 shape。
+- 薄弱点：
+  - `data.files` 与 `data["train_images"]` 的区别仍需复习。
+  - 原地操作 `image /= 255` 和非原地操作 `image = image / 255` 的区别需要继续训练。
