@@ -61,3 +61,18 @@
 - Task 7：Assessment 已通过，已进入 Review Pool。
 - Task 8：Assessment 已通过，已进入 Review Pool。
 - Task 9：Assessment 已通过，已进入 Review Pool。
+### Task 10：Inspect NPZ Dataset
+
+- 完成日期：2026-07-01
+- Assessment：通过，已进入 Review Pool
+- Review 优先级：高
+- 重点知识：
+  - `.npz` 是 NumPy 容器，使用字符串 key 访问数组。
+  - `data.files` 是属性，不是函数，不能写成 `data.files()`。
+  - `np.unique(array)` 是 NumPy 模块函数，不是 `array.unique()`。
+  - `val_images.shape = (N, H, W, C)`，本任务中为 `(1712, 128, 128, 3)`。
+  - `val_images.shape[0] == val_labels.shape[0]` 只能证明数量一致，不能证明一一对应一定正确。
+  - Python 语句不能直接在 PowerShell 中执行；调试时要区分 shell 环境和 Python 环境。
+- 薄弱点：
+  - 属性 / 方法 / 模块函数的区分仍需复习。
+  - API 不确定时要优先使用 `type`、`hasattr`、`callable`，不要随机猜。
