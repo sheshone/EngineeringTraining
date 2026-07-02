@@ -91,3 +91,18 @@
 - 薄弱点：
   - `data.files` 与 `data["train_images"]` 的区别仍需复习。
   - 原地操作 `image /= 255` 和非原地操作 `image = image / 255` 的区别需要继续训练。
+### Task 12：NumPy Image to PyTorch Tensor CHW
+
+- 完成日期：2026-07-02
+- Assessment：通过，已进入 Review Pool
+- Review 优先级：高
+- 重点知识：
+  - NumPy 图像常见格式是 `HWC`，本任务中为 `(128, 128, 3)`。
+  - PyTorch 单张 CNN 图像常用 `CHW`，本任务中为 `(3, 128, 128)`。
+  - `torch.from_numpy(...)` 只转换容器，不会自动改变维度顺序。
+  - `permute(2, 0, 1)` 把原来的 `C` 维从最后移动到最前。
+  - `/255.0` 改变像素值范围，`permute` 改变维度顺序，`.float()` 改变 dtype。
+  - 深度学习中通常使用 `float32`，因为精度通常够用且更省内存、计算更快、和模型权重 dtype 更一致。
+- 薄弱点：
+  - `data.files` 与 `data["train_images"]` 的区别仍需抽查。
+  - 正式脚本应减少 `hasattr/callable/help` 等临时调试输出。
