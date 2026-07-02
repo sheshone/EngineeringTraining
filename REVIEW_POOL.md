@@ -123,3 +123,19 @@
   - 类属性赋值、局部变量与对象属性的关系需要继续复习。
   - `__len__` 中递归调用 `len(self)` 的错误需要抽查。
   - 类名和变量名不应相同。
+### Task 14：Tensor Dataset
+
+- 完成日期：2026-07-02
+- Assessment：通过，已进入 Review Pool
+- Review 优先级：高
+- 重点知识：
+  - `__getitem__(idx)` 应只处理第 `idx` 个样本，不应每次转换整个数据集。
+  - 单张图像转换流程：`/255.0 -> torch.from_numpy -> permute(2,0,1) -> .float()`。
+  - 单张图像 `permute(2,0,1)`：`(H,W,C) -> (C,H,W)`。
+  - 整批图像换序思路：`(N,H,W,C) -> (N,C,H,W)`，对应 `permute(0,3,1,2)`。
+  - label 是类别 ID，不做归一化。
+  - `int(label[0])` 把 shape `(1,)` 的标签数组转换为普通类别整数。
+- 薄弱点：
+  - Windows 路径字符串中的反斜杠转义，例如 `\b`。
+  - 单样本转换和整批转换的维度顺序仍需抽查。
+  - Dataset 返回值解包顺序应保持 `(image, label)`。
