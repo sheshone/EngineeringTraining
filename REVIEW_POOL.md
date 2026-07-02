@@ -106,3 +106,20 @@
 - 薄弱点：
   - `data.files` 与 `data["train_images"]` 的区别仍需抽查。
   - 正式脚本应减少 `hasattr/callable/help` 等临时调试输出。
+### Task 13：Minimal Dataset
+
+- 完成日期：2026-07-02
+- Assessment：通过，已进入 Review Pool
+- Review 优先级：高
+- 重点知识：
+  - `len(dataset)` 会调用 `dataset.__len__()`。
+  - `dataset[idx]` 会调用 `dataset.__getitem__(idx)`。
+  - Dataset 的职责是按索引返回一个样本 `(image, label)`。
+  - `idx` 是样本索引，不是类别。
+  - `__len__` 应返回 `len(self.images)`，不能写 `len(self)`。
+  - `__init__` 中应先检查 `len(images) == len(labels)`，再保存到 `self.images` 和 `self.labels`。
+  - 真实 MedMNIST 第 0 个样本中，image shape 为 `(128, 128, 3)`，label shape 为 `(1,)`。
+- 薄弱点：
+  - 类属性赋值、局部变量与对象属性的关系需要继续复习。
+  - `__len__` 中递归调用 `len(self)` 的错误需要抽查。
+  - 类名和变量名不应相同。
