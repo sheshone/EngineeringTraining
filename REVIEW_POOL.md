@@ -170,3 +170,20 @@
   - 容易混淆 `len(dataloader)` 和 `batch_size`。
   - 类方法中应使用 `self.images`，不要误用外部全局变量。
   - DataLoader 不负责归一化、permute 或训练。
+### Task 17：Batch Sanity Check
+
+- 完成日期：2026-07-03
+- Assessment：通过，已进入 Review Pool
+- Review 优先级：高
+- 重点知识：
+  - CNN batch 输入通常是 `[B,C,H,W]`，本任务中为 `[4,3,128,128]`。
+  - `B` 是一个 batch 中的样本数，不是 batch 数量；`C` 是通道数，不是模型数量。
+  - 如果给成 `[B,H,W,C]`，PyTorch `Conv2d` 会把 `H` 误认为 channel。
+  - 分类 labels 应为 `[B]`，dtype 为 `torch.int64/long`。
+  - 分类 label 是类别索引，不是连续数值；合法范围是 `0 <= label < num_classes`。
+  - `num_classes` 应是 `len(np.unique(train_labels))`，不是类别数组本身。
+  - `labels.min()` 返回 Tensor，`labels.min().item()` 返回 Python 数字。
+- 薄弱点：
+  - batch、channel、模型数量之间的概念边界需要长期复习。
+  - 为什么分类 target 用 `int64/long` 而不是 float，需要继续抽查。
+  - `.item()` 只能用于单元素 Tensor。
