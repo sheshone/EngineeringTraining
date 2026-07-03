@@ -154,3 +154,19 @@
   - 长度检查不能误写成 `len(images) != len(images)`。
   - Dataset / DataLoader / nn.Module 的职责边界需要长期复习。
   - 正式错误信息应清楚说明原因，不应使用 `"!!!"`。
+### Task 16：Minimal DataLoader
+
+- 完成日期：2026-07-03
+- Assessment：通过，已进入 Review Pool
+- Review 优先级：高
+- 重点知识：
+  - Dataset 返回单个样本，DataLoader 把多个样本组合成 batch。
+  - 单样本 image shape 为 `[3,128,128]`，batch images shape 为 `[4,3,128,128]`。
+  - 单样本 label 是 Python `int`，batch labels shape 为 `[4]`，dtype 为 `torch.int64`。
+  - `len(dataset)` 是样本总数，`batch_size` 是每个 batch 的样本数，`len(dataloader)` 是 batch 总数。
+  - `iter(dataloader)` 创建迭代器，`next(...)` 取下一个 batch。
+  - `shuffle=False` 时第一个 batch 对应样本索引 `0,1,2,3`。
+- 薄弱点：
+  - 容易混淆 `len(dataloader)` 和 `batch_size`。
+  - 类方法中应使用 `self.images`，不要误用外部全局变量。
+  - DataLoader 不负责归一化、permute 或训练。
