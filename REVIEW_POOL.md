@@ -139,3 +139,18 @@
   - Windows 路径字符串中的反斜杠转义，例如 `\b`。
   - 单样本转换和整批转换的维度顺序仍需抽查。
   - Dataset 返回值解包顺序应保持 `(image, label)`。
+### Task 15：PyTorch Dataset
+
+- 完成日期：2026-07-02
+- Assessment：通过，已进入 Review Pool
+- Review 优先级：高
+- 重点知识：
+  - 继承 `torch.utils.data.Dataset` 后仍然要自己实现 `__len__` 和 `__getitem__`。
+  - PyTorch Dataset 基类不能直接代表你的具体数据集，必须实例化自己的子类。
+  - Dataset 负责按索引返回单个样本，DataLoader 负责批量取样、shuffle、组 batch，`nn.Module` 负责模型前向计算。
+  - 继承 Dataset 不会自动完成归一化、Tensor 转换或 `permute`。
+  - `isinstance(dataset, Dataset)` 为 `True` 表示自定义数据集对象也是 PyTorch Dataset 类型。
+- 薄弱点：
+  - 长度检查不能误写成 `len(images) != len(images)`。
+  - Dataset / DataLoader / nn.Module 的职责边界需要长期复习。
+  - 正式错误信息应清楚说明原因，不应使用 `"!!!"`。
