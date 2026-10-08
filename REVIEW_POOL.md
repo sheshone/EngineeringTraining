@@ -187,3 +187,19 @@
   - batch、channel、模型数量之间的概念边界需要长期复习。
   - 为什么分类 target 用 `int64/long` 而不是 float，需要继续抽查。
   - `.item()` 只能用于单元素 Tensor。
+
+### Task 18：最小 nn.Module 前向传播
+
+- 完成日期：2026-09-08
+- Assessment：通过，已进入 Review Pool
+- Review 优先级：高
+- 重点知识：
+  - `nn.Linear(in_features, out_features)` 创建层，`self.linear(x)` 使用层计算。
+  - `self.flatten = nn.Flatten()` 是属性赋值，等号左边不能写调用括号。
+  - `model(images)` 会通过 `nn.Module` 的调用机制进入 `forward(images)`。
+  - `Flatten` 默认保留 batch 维度：`[B,3,128,128] -> [B,49152]`。
+  - logits shape `[B,8]` 表示每个样本有 8 个原始类别分数，不是概率。
+  - 当前 `Flatten + Linear` 是线性分类器，不是真正的 CNN。
+- 薄弱点：
+  - batch 大小与 batch 数量仍需间隔复习。
+  - 创建层、保存层和调用层的语法仍需巩固。
